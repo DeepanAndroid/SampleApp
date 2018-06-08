@@ -22,10 +22,6 @@ public class ProfileFragment extends BaseFragment {
 
     @BindView(R.id.profile_parent)
     CoordinatorLayout mCoordinatorLayout;
-    @BindView(R.id.edit_icon)
-    ImageView mEditIcon;
-    @BindView(R.id.name_edt)
-    EditText mNameEdt;
 
 
     @Nullable
@@ -39,26 +35,7 @@ public class ProfileFragment extends BaseFragment {
 
     private void initView() {
         setupUI(mCoordinatorLayout);
-        mNameEdt.setEnabled(false);
-        mNameEdt.setFocusableInTouchMode(false);
         showSnackBar(mCoordinatorLayout, getString(R.string.temp_alert));
     }
-
-    @OnClick({R.id.edit_icon, R.id.update_btn, R.id.logout_btn})
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.edit_icon:
-                break;
-            case R.id.update_btn:
-                mNameEdt.setEnabled(false);
-                mNameEdt.setFocusableInTouchMode(false);
-                break;
-            case R.id.logout_btn:
-
-                break;
-
-        }
-    }
-
 
 }

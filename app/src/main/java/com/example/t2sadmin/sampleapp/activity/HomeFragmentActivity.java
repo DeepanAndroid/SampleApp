@@ -30,6 +30,7 @@ public class HomeFragmentActivity extends BaseActivity implements FragmentManage
     TextView mHeaderTxt;
     private Fragment mCurrentFragment;
     private Fragment mPreviousFragment;
+    private Fragment mVisibleFragment;
     @BindView(R.id.footer_view)
     BottomNavigationView mBottomNavigationView;
 
@@ -38,7 +39,7 @@ public class HomeFragmentActivity extends BaseActivity implements FragmentManage
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ui_recycle_view);
+        setContentView(R.layout.ui_home_screen);
         ButterKnife.bind(this);
         initView();
     }

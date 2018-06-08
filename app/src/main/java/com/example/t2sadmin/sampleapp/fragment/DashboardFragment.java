@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.t2sadmin.sampleapp.R;
 import com.example.t2sadmin.sampleapp.activity.HomeFragmentActivity;
 import com.example.t2sadmin.sampleapp.main.BaseFragment;
 
