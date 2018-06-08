@@ -1,4 +1,4 @@
-package com.example.t2sadmin.sampleapp;
+package com.example.t2sadmin.sampleapp.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,21 +9,25 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 
+import com.example.t2sadmin.sampleapp.R;
+import com.example.t2sadmin.sampleapp.model.RecyclerViewEntity;
+import com.example.t2sadmin.sampleapp.customviews.CustomRecyclerView;
+
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class TempAdapter extends
+public class RecyclerViewAdapter extends
         CustomRecyclerView.Adapter<CustomRecyclerView.ViewHolder> {
 
     private Context mContext;
-    private ArrayList<TempEntity> mTempList;
+    private ArrayList<RecyclerViewEntity> mTempList;
     private LayoutInflater mInflater;
 
 
-    public TempAdapter(Context context, ArrayList<TempEntity> tempList) {
+    public RecyclerViewAdapter(Context context, ArrayList<RecyclerViewEntity> tempList) {
         mContext = context;
         mTempList = tempList;
         mInflater = LayoutInflater.from(mContext);
@@ -32,13 +36,13 @@ public class TempAdapter extends
     @NonNull
     @Override
     public CustomRecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View mView = mInflater.inflate(R.layout.temp_radio_adap, parent, false);
+        View mView = mInflater.inflate(R.layout.recycler_radio_adap, parent, false);
         switch (viewType) {
             case CustomRecyclerView.CHOICE_MODE_SINGLE:
-                mView = mInflater.inflate(R.layout.temp_radio_adap, parent, false);
+                mView = mInflater.inflate(R.layout.recycler_radio_adap, parent, false);
                 return new RadioViewHolder(mView);
             case CustomRecyclerView.CHOICE_MODE_MULTIPLE:
-                mView = mInflater.inflate(R.layout.temp_checkbox_adap, parent, false);
+                mView = mInflater.inflate(R.layout.recycler_checkbox_adap, parent, false);
                 return new CheckBoxViewHolder(mView);
         }
         return new RadioViewHolder(mView);
@@ -46,19 +50,19 @@ public class TempAdapter extends
 
     @Override
     public void onBindViewHolder(@NonNull CustomRecyclerView.ViewHolder mHolder, int pos) {
-        TempEntity mTempEntity = mTempList.get(pos);
+        RecyclerViewEntity mRecyclerViewEntity = mTempList.get(pos);
         switch (getItemViewType(pos)) {
             case CustomRecyclerView.CHOICE_MODE_SINGLE:
                 RadioViewHolder mViewHolder = (RadioViewHolder) mHolder;
-                mViewHolder.mRadioBtn.setText(mTempEntity.getUserName());
-                mViewHolder.mRadioBtn.setChecked(mTempEntity.isSelected());
+                mViewHolder.mRadioBtn.setText(mRecyclerViewEntity.getUserName());
+                mViewHolder.mRadioBtn.setChecked(mRecyclerViewEntity.isSelected());
                 mViewHolder.mRadioBtn.setTag(pos);
                 mViewHolder.mRadioBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(CompoundButton v, boolean isChecked) {
                         int selPos = (int) v.getTag();
                         if (v.isPressed()) {
-                            for (TempEntity mEntity : mTempList) {
+                            for (RecyclerViewEntity mEntity : mTempList) {
                                 mEntity.setSelected(false);
                             }
                             mTempList.get(selPos).setSelected(true);
@@ -70,8 +74,8 @@ public class TempAdapter extends
                 break;
             case CustomRecyclerView.CHOICE_MODE_MULTIPLE:
                 CheckBoxViewHolder mCheckBoxViewHolder = (CheckBoxViewHolder) mHolder;
-                mCheckBoxViewHolder.mCheckBox.setText(mTempEntity.getUserName());
-                mCheckBoxViewHolder.mCheckBox.setChecked(mTempEntity.isSelected());
+                mCheckBoxViewHolder.mCheckBox.setText(mRecyclerViewEntity.getUserName());
+                mCheckBoxViewHolder.mCheckBox.setChecked(mRecyclerViewEntity.isSelected());
                 mCheckBoxViewHolder.mCheckBox.setTag(pos);
                 mCheckBoxViewHolder.mCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override

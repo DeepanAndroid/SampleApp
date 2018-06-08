@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/LayoutMatch">
 
-    <com.example.t2sadmin.sampleapp.CustomRecyclerView
+    <com.example.t2sadmin.sampleapp.customviews.CustomRecyclerView
         android:id="@+id/common_list_view"
         style="@style/LayoutMatchWrap"
         android:scrollbars="none"

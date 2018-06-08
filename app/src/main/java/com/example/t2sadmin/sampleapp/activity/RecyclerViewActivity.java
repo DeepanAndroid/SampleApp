@@ -1,4 +1,4 @@
-package com.example.t2sadmin.sampleapp;
+package com.example.t2sadmin.sampleapp.activity;
 
 
 import android.os.Bundle;
@@ -7,21 +7,26 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.t2sadmin.sampleapp.R;
+import com.example.t2sadmin.sampleapp.adapter.RecyclerViewAdapter;
+import com.example.t2sadmin.sampleapp.model.RecyclerViewEntity;
+import com.example.t2sadmin.sampleapp.customviews.CustomRecyclerView;
+
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class TempScreen extends AppCompatActivity {
+public class RecyclerViewActivity extends AppCompatActivity {
 
     @BindView(R.id.common_list_view)
     CustomRecyclerView mTempListVIew;
     @BindView(R.id.next_btn)
     Button mNextBtn;
-    private TempAdapter mTempAdapter;
+    private RecyclerViewAdapter mRecyclerViewAdapter;
     private LinearLayoutManager mLayoutManager;
 
-    private ArrayList<TempEntity> mTempList;
+    private ArrayList<RecyclerViewEntity> mTempList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,7 +59,7 @@ public class TempScreen extends AppCompatActivity {
     private void setRadioList() {
         mTempList.clear();
         for (int i = 1; i <= 10; i++) {
-            TempEntity mTemp = new TempEntity();
+            RecyclerViewEntity mTemp = new RecyclerViewEntity();
             mTemp.setUserName("Deepan");
             mTemp.setType("Radio");
             mTemp.setUserID(i);
@@ -68,7 +73,7 @@ public class TempScreen extends AppCompatActivity {
     private void setCheckboxList() {
         mTempList.clear();
         for (int i = 1; i <= 10; i++) {
-            TempEntity mTemp = new TempEntity();
+            RecyclerViewEntity mTemp = new RecyclerViewEntity();
             mTemp.setUserName("Chakravarthi");
             mTemp.setType("");
             mTemp.setUserID(i);
@@ -80,11 +85,11 @@ public class TempScreen extends AppCompatActivity {
     }
 
     private void setAdapter() {
-        if (mTempAdapter != null) {
-            mTempAdapter.notifyDataSetChanged();
+        if (mRecyclerViewAdapter != null) {
+            mRecyclerViewAdapter.notifyDataSetChanged();
         } else {
-            mTempAdapter = new TempAdapter(this, mTempList);
-            mTempListVIew.setAdapter(mTempAdapter);
+            mRecyclerViewAdapter = new RecyclerViewAdapter(this, mTempList);
+            mTempListVIew.setAdapter(mRecyclerViewAdapter);
         }
     }
 

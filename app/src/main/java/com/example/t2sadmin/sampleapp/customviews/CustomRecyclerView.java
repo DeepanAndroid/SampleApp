@@ -1,4 +1,4 @@
-package com.example.t2sadmin.sampleapp;
+package com.example.t2sadmin.sampleapp.customviews;
 
 import android.content.Context;
 import android.support.annotation.Nullable;

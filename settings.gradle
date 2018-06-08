@@ -1,2 +1,4 @@
 include ':app'
+//include ':formgenerator', ':app'
+//project(':formgenerator').projectDir = new File(settingsDir, '../formgenerator/app')
 
