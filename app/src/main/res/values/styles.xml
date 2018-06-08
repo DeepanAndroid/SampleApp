@@ -1,30 +1,227 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@mipmap/ic_launcher</item>
     </style>
 
-    <style name="LayoutMatchWrap">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@color/header_bg</item>
+        <item name="android:background">@color/header_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">@style/popupMenuTextItem</item>
     </style>
 
-    <style name="LayoutMatch">
+    <style name="popupMenuTextItem" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="LayoutMatch" parent="AppTheme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="LayoutMatchWrap" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="LayoutWrap" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="LayoutWeightWrap" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
 
+    <style name="ViewHorizontal" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size1</item>
+        <item name="android:layout_marginTop">@dimen/size5</item>
+        <item name="android:layout_marginBottom">@dimen/size5</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="ViewVertical" parent="AppTheme">
+        <item name="android:layout_width">@dimen/size1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/size5</item>
+        <item name="android:layout_marginBottom">@dimen/size5</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="ViewVerticalNomargin" parent="AppTheme">
+        <item name="android:layout_width">@dimen/size1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="ViewHorizontalNomargin" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size1</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="AppTheme.Widget.TextView" parent="android:Widget.TextView">
+
+    </style>
+
+    <style name="TextBold" parent="AppTheme.Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/size3</item>
+        <!--<item name="fontPath">fonts/Lato-BlackItalic.otf</item>-->
+    </style>
+
+
+    <style name="TextLight" parent="AppTheme.Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/size3</item>
+    </style>
+
+    <style name="TextRegular" parent="AppTheme.Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/size3</item>
+    </style>
+
+    <style name="EditBold" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:padding">@dimen/size3</item>
+    </style>
+
+    <style name="EditLight" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:padding">@dimen/size3</item>
+    </style>
+
+    <style name="EditRegular" parent="android:Widget.EditText">
+        <item name="android:textSize">@dimen/text12</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:padding">@dimen/size3</item>
+        <!--<item name="fontPath">fonts/Lato-Regular.otf</item>-->
+    </style>
+
+    <style name="AutoRegular" parent="android:Widget.AutoCompleteTextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:padding">@dimen/size3</item>
+    </style>
+
+    <style name="ButtonBold" parent="android:Widget.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--<style name="BackButton" parent="android:Widget.Button">-->
+    <!--<item name="android:layout_width">@dimen/size25</item>-->
+    <!--<item name="android:layout_height">@dimen/size20</item>-->
+    <!--<item name="android:background">@drawable/back_icon</item>-->
+    <!--</style>-->
+
+    <style name="ButtonLight" parent="android:Widget.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ButtonRegular" parent="android:Widget.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CustomSpinner" parent="android:Widget.Spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:dropDownWidth">match_parent</item>
+        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:dropDownVerticalOffset">@dimen/size40</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:dividerHeight">@dimen/size1</item>
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:dropDownHeight">wrap_content</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:dropDownSelector">@color/grey</item>
+    </style>
+
+    <style name="CustomSpinner30" parent="android:Widget.Spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:dropDownWidth">match_parent</item>
+        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:dropDownVerticalOffset">@dimen/size30</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:dividerHeight">@dimen/size1</item>
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:dropDownHeight">wrap_content</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:dropDownSelector">@color/grey</item>
+    </style>
+
+    <style name="DialogAnimationFromBottom">
+        <item name="android:windowEnterAnimation">@anim/anim_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/anim_in_top</item>
+    </style>
+
+    <style name="DialogAnimationFromLeft">
+        <item name="android:windowEnterAnimation">@anim/slide_out_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_left</item>
+    </style>
+    <!--<style name="CustomRatingBar" parent="android:Widget.RatingBar">-->
+    <!--<item name="android:progressDrawable">@drawable/custom_ratingbar_bg</item>-->
+    <!--<item name="android:minHeight">@dimen/size35</item>-->
+    <!--<item name="android:maxHeight">@dimen/size35</item>-->
+    <!--</style>-->
+
+    <style name="PushAnimation">
+        <item name="android:windowEnterAnimation">@anim/push_anim_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/push_anim_in_top</item>
+    </style>
+
+
+    <!--parent="@android:style/TextAppearance.Widget.TabWidget"-->
+    <style name="CustomTabWidgetText">
+        <item name="android:textSize">@dimen/text8</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LayoutMatch"
+    android:background="@color/transparent50">
+
+    <RelativeLayout
+        style="@style/LayoutMatch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            style="@style/LayoutMatch"
+            android:layout_above="@+id/bottom_lay"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:background="@color/black">
+
+            <ProgressBar
+                android:layout_width="@dimen/size15"
+                android:layout_height="@dimen/size15"
+                android:layout_centerInParent="true" />
+
+            <com.deepan.bytoo.utils.ZoomImageView
+                android:id="@+id/img_view"
+                style="@style/LayoutWrap"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bottom_lay"
+            style="@style/LayoutMatchWrap"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/change_btn"
+                style="@style/ButtonBold"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size40"
+                android:layout_margin="@dimen/size5"
+                android:background="@drawable/green_btn"
+                android:text="@string/change_pic"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text15" />
+
+            <Button
+                android:id="@+id/remove_location_btn"
+                style="@style/ButtonBold"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size40"
+                android:layout_margin="@dimen/size5"
+                android:background="@drawable/green_btn"
+                android:text="@string/remove_pic"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text15" />
+
+            <Button
+                android:id="@+id/close_btn"
+                style="@style/ButtonBold"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size40"
+                android:layout_margin="@dimen/size5"
+                android:background="@drawable/green_btn"
+                android:text="@string/close"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text15" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

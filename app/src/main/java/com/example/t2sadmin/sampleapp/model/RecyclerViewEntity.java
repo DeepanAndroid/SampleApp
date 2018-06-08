@@ -1,6 +1,6 @@
-package com.example.t2sadmin.sampleapp;
+package com.example.t2sadmin.sampleapp.model;
 
-public class TempEntity {
+public class RecyclerViewEntity {
 
     private int UserID;
     private String UserName;

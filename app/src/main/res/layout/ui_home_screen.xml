@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_parent"
+    style="@style/LayoutMatch"
+    android:background="@color/white">
+
+    <RelativeLayout style="@style/LayoutMatch">
+
+        <LinearLayout
+            android:id="@+id/header_lay"
+            style="@style/LayoutMatchWrap"
+            android:orientation="vertical">
+
+            <include layout="@layout/general_header_txt" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            style="@style/LayoutMatch"
+            android:layout_above="@+id/footer_view"
+            android:layout_below="@+id/header_lay"
+            android:background="@color/white" />
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/footer_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50"
+            android:background="@color/footer_bg"
+            android:layout_alignParentBottom="true"
+            app:itemIconTint="@color/footer_color"
+            app:itemTextColor="@color/footer_color"
+            app:menu="@menu/footer_menu" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
