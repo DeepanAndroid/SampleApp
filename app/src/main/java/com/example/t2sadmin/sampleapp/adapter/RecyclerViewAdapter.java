@@ -10,8 +10,8 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 
 import com.example.t2sadmin.sampleapp.R;
-import com.example.t2sadmin.sampleapp.model.RecyclerViewEntity;
 import com.example.t2sadmin.sampleapp.customviews.CustomRecyclerView;
+import com.example.t2sadmin.sampleapp.model.RecyclerViewEntity;
 
 import java.util.ArrayList;
 
@@ -94,6 +94,20 @@ public class RecyclerViewAdapter extends
         }
     }
 
+    @Override
+    public int getItemCount() {
+        return mTempList.size();
+    }
+
+    @Override
+    public int getItemViewType(int pos) {
+        if (CustomRecyclerView.CHOICE_MODE == CustomRecyclerView.CHOICE_MODE_SINGLE) {
+            return CustomRecyclerView.CHOICE_MODE_SINGLE;
+        } else {
+            return CustomRecyclerView.CHOICE_MODE_MULTIPLE;
+        }
+    }
+
     public class RadioViewHolder extends CustomRecyclerView.ViewHolder {
 
         @BindView(R.id.radio_btn)
@@ -109,7 +123,6 @@ public class RecyclerViewAdapter extends
 
     }
 
-
     public class CheckBoxViewHolder extends CustomRecyclerView.ViewHolder {
 
         @BindView(R.id.checkbox)
@@ -118,20 +131,6 @@ public class RecyclerViewAdapter extends
         CheckBoxViewHolder(View v) {
             super(v);
             ButterKnife.bind(this, v);
-        }
-    }
-
-    @Override
-    public int getItemCount() {
-        return mTempList.size();
-    }
-
-    @Override
-    public int getItemViewType(int pos) {
-        if (CustomRecyclerView.CHOICE_MODE == CustomRecyclerView.CHOICE_MODE_SINGLE) {
-            return CustomRecyclerView.CHOICE_MODE_SINGLE;
-        } else {
-            return CustomRecyclerView.CHOICE_MODE_MULTIPLE;
         }
     }
 }

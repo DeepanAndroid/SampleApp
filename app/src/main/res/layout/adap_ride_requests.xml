@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LayoutMatchWrap">
+
+    <RelativeLayout style="@style/LayoutMatchWrap">
+
+        <android.support.v7.widget.CardView
+            style="@style/LayoutMatchWrap"
+            android:layout_margin="@dimen/size5">
+
+            <LinearLayout
+                android:id="@+id/main_lay"
+                style="@style/LayoutMatchWrap"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    style="@style/LayoutMatchWrap"
+                    android:background="@color/orange"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/size5">
+
+                    <TextView
+                        android:id="@+id/date_txt"
+                        style="@style/LayoutWrap"
+                        android:padding="@dimen/size2"
+                        android:text="10/7/2017"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text14" />
+
+                    <TextView
+                        android:id="@+id/amount_txt"
+                        style="@style/LayoutWrap"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/size2"
+                        android:text="2 seats needed"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text14" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    style="@style/LayoutMatchWrap"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/size5">
+
+                    <TextView
+                        android:id="@+id/start_time_txt"
+                        style="@style/LayoutWrap"
+                        android:padding="@dimen/size2"
+                        android:text="Leaving After 08:00 PM"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text12"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/start_place_txt"
+                        style="@style/LayoutWrap"
+                        android:padding="@dimen/size2"
+                        android:text="Chennai - Salem"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text12" />
+                </LinearLayout>
+
+                <View
+                    style="@style/LayoutMatchWrap"
+                    android:layout_height="@dimen/size1"
+                    android:background="@color/grey" />
+
+                <LinearLayout
+                    style="@style/LayoutMatchWrap"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size5"
+                    android:paddingRight="@dimen/size5">
+
+                    <RelativeLayout
+                        android:id="@+id/user_img_lay"
+                        style="@style/LayoutWrap"
+                        android:layout_gravity="center|start"
+                        android:layout_marginBottom="@dimen/size5"
+                        android:layout_marginTop="@dimen/size5">
+
+                        <ProgressBar
+                            android:layout_width="@dimen/size15"
+                            android:layout_height="@dimen/size15"
+                            android:layout_centerInParent="true" />
+
+                        <com.deepan.bytoo.utils.ImageViewRounded
+                            android:id="@+id/user_img"
+                            android:layout_width="@dimen/size30"
+                            android:layout_height="@dimen/size30"
+                            android:src="@drawable/default_profile_icon" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/content_lay"
+                        style="@style/LayoutMatchWrap"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/size5"
+                        android:layout_marginStart="@dimen/size5"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            style="@style/LayoutMatchWrap"
+                            android:gravity="center|start"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/user_name_txt"
+                                style="@style/LayoutWrap"
+                                android:padding="@dimen/size2"
+                                android:text="Thiru"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/age_txt"
+                                style="@style/LayoutWrap"
+                                android:padding="@dimen/size2"
+                                android:text="(28 y/o)"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/ratings_txt"
+                            style="@style/LayoutWrap"
+                            android:padding="@dimen/size2"
+                            android:text="4/5 - ratings"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text12" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

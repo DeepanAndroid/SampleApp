@@ -7,9 +7,9 @@ import android.util.AttributeSet;
 
 public class CustomRecyclerView extends RecyclerView {
 
-    public static int CHOICE_MODE = 1;
     public static final int CHOICE_MODE_SINGLE = 1;
     public static final int CHOICE_MODE_MULTIPLE = 2;
+    public static int CHOICE_MODE = 1;
 
 
     public CustomRecyclerView(Context context) {

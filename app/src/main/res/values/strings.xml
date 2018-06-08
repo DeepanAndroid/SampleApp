@@ -1,4 +1,46 @@
 <resources>
+    <!--Common Strings-->
+    <string name="pkg_name">com.example.t2sadmin.sampleapp</string>
     <string name="app_name">SampleApp</string>
-    <string name="title_activity_main">MainActivity</string>
+
+    <string name="file_provider_authority" translatable="false">com.example.t2sadmin.sampleapp.fileprovider</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="close">Close</string>
+    <string name="save">Save</string>
+    <string name="update">Update</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="back">Back</string>
+    <string name="select_date">Select Date</string>
+    <string name="alert_settings">Permission must be required for this app, Please enable the permissions in app settings under the permissions section.</string>
+    <string name="temp_alert">Under Development</string>
+    <string name="submit">Submit</string>
+    <string name="change_pic">Change Picture</string>
+    <string name="remove_pic">Remove Picture</string>
+    <string name="select">Select</string>
+    <string name="cancel">Cancel</string>
+    <string name="connect_time_out">Server Connection Timeout, Please try again.</string>
+    <string name="no_internet"> Please verify your internet connection.</string>
+    <string name="failure_alert">Oops! Something went wrong. Please try again</string>
+    <string name="rs">\u20B9</string>
+
+    <!--Home Screen-->
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile">Profile</string>
+
+    <!--Dashboard Screen-->
+    <string name="ride_offers">Ride Offer\'s</string>
+    <string name="ride_requests">Ride Request\'s</string>
+
+    <!--Profile Screen-->
+    <string name="user_name_hint">Username</string>
+    <string name="dob_hint">DOB</string>
+    <string name="gender_hint">Gender</string>
+    <string name="about_bio">About Bio</string>
+    <string name="logout">Logout</string>
+
 </resources>

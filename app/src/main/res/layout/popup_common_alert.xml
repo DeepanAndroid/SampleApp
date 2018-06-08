@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LayoutMatch"
+    android:background="@color/transparent50"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/LayoutMatchWrap"
+        android:layout_margin="@dimen/size10"
+        android:background="@android:drawable/alert_light_frame"
+        android:orientation="vertical"
+        android:padding="@dimen/size20">
+
+        <TextView
+            android:id="@+id/msg_txt"
+            style="@style/TextBold"
+            android:layout_marginTop="@dimen/size3"
+            android:padding="@dimen/size7"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text14" />
+
+        <LinearLayout
+            style="@style/LayoutMatchWrap"
+            android:layout_marginBottom="@dimen/size10"
+            android:layout_marginLeft="@dimen/size30"
+            android:layout_marginRight="@dimen/size30"
+            android:layout_marginTop="@dimen/size11"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ok_btn"
+                style="@style/ButtonBold"
+                android:layout_width="@dimen/size100"
+                android:layout_height="@dimen/size40"
+                android:background="@drawable/green_btn"
+                android:text="@string/ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text15" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

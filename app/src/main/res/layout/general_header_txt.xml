@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LayoutMatchWrap">
+
+    <RelativeLayout
+        android:id="@+id/general_header_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:background="@color/header_bg">
+
+        <RelativeLayout
+            android:id="@+id/header_left_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/header_left_text"
+                style="@style/LayoutWrap"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/size10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text12"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/LayoutMatch"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/header_txt"
+                style="@style/TextBold"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text14"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/header_center_icon"
+                style="@style/LayoutWrap"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:padding="@dimen/size10"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/header_right_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/header_right_text"
+                style="@style/LayoutWrap"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/size10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text12"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

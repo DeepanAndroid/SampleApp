@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/LayoutMatch">
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/common_recycle_parent"
+    style="@style/LayoutMatch"
+    android:background="@color/grey">
 
-    <com.example.t2sadmin.sampleapp.customviews.CustomRecyclerView
-        android:id="@+id/common_list_view"
-        style="@style/LayoutMatchWrap"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout style="@style/LayoutMatch">
 
-    <Button
-        android:id="@+id/next_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Next" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/common_list_view"
+            style="@style/LayoutMatchWrap"
+            android:background="@color/grey"
+            android:divider="@color/transparent"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none"
+            tools:targetApi="lollipop" />
 
-</android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
