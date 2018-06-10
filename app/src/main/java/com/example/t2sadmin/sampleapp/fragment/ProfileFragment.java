@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.t2sadmin.sampleapp.R;
+import com.example.t2sadmin.sampleapp.activity.HomeFragmentActivity;
 import com.example.t2sadmin.sampleapp.main.BaseFragment;
 
 import butterknife.BindView;
@@ -29,12 +30,24 @@ public class ProfileFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.frag_profile_screen, container, false);
         ButterKnife.bind(this, rootView);
-        initView();
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        initView();
+    }
+
+    @Override
+    public void onRefreshFragment() {
+        super.onRefreshFragment();
+        initView();
     }
 
     private void initView() {
         setupUI(mCoordinatorLayout);
+        ((HomeFragmentActivity) getActivity()).setTitleTxt(getString(R.string.profile));
         showSnackBar(mCoordinatorLayout, getString(R.string.temp_alert));
     }
 

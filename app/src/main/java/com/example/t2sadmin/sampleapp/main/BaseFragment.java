@@ -64,6 +64,10 @@ public class BaseFragment extends Fragment {
 
     }
 
+    public void onRefreshFragment(){
+
+    }
+
     public void showToast(String msg) {
         Toast.makeText(getActivity(), msg, Toast.LENGTH_LONG).show();
     }

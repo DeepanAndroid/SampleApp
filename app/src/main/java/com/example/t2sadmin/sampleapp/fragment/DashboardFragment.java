@@ -36,13 +36,20 @@ public class DashboardFragment extends BaseFragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onResume() {
+        super.onResume();
+        initView();
+    }
+
+    @Override
+    public void onRefreshFragment() {
+        super.onRefreshFragment();
         initView();
     }
 
     private void initView() {
         ((HomeFragmentActivity) getActivity()).setTitleTxt(getString(R.string.home));
+        showSnackBar(mCoordinatorLayout, getString(R.string.temp_alert));
     }
 
 

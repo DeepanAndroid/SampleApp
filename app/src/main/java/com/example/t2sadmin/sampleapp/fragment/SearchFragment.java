@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.t2sadmin.sampleapp.R;
+import com.example.t2sadmin.sampleapp.activity.HomeFragmentActivity;
 import com.example.t2sadmin.sampleapp.main.BaseFragment;
 
 import butterknife.BindView;
@@ -32,18 +33,19 @@ public class SearchFragment extends BaseFragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onResume() {
+        super.onResume();
         initView();
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-
+    public void onRefreshFragment() {
+        super.onRefreshFragment();
+        initView();
     }
 
     private void initView() {
+        ((HomeFragmentActivity) getActivity()).setTitleTxt(getString(R.string.search));
         showSnackBar(mCoordinatorLayout, getString(R.string.temp_alert));
     }
 
