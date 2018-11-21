@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LayoutMatchWrap">
+
+    <android.support.v7.widget.CardView
+        style="@style/LayoutMatchWrap"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            style="@style/LayoutMatchWrap"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:id="@+id/headerLay"
+                style="@style/LayoutMatchWrap">
+
+                <TextView
+                    android:id="@+id/titleTxt"
+                    style="@style/LayoutMatchWrap"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/addIcon"
+                    android:textColor="@color/black"
+                    android:text="Profile" />
+
+                <ImageView
+                    android:id="@+id/addIcon"
+                    style="@style/LayoutWrap"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/add_icon" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/childLay"
+                style="@style/LayoutMatchWrap"
+                android:layout_below="@+id/headerLay"
+                android:layout_marginTop="@dimen/size10"
+                android:orientation="vertical" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.design.widget.CoordinatorLayout>
